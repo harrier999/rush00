@@ -6,11 +6,11 @@
 /*   By: bwoo <bwoo@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 17:21:54 by bwoo              #+#    #+#             */
-/*   Updated: 2021/03/27 17:58:34 by bwoo             ###   ########.fr       */
+/*   Updated: 2021/03/27 21:28:31 by bwoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int a, int b);
+void	rush(int col, int row);
 
 int		main(void)
 {
