@@ -6,21 +6,22 @@
 /*   By: bwoo <bwoo@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 17:27:32 by bwoo              #+#    #+#             */
-/*   Updated: 2021/03/27 21:18:01 by bwoo             ###   ########.fr       */
+/*   Updated: 2021/03/28 11:34:22 by hyun-wle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	rush(int col, int row);
 void	ft_putchar(char c);
 void	all_lines(int i, int j, int col, int row);
-void	checking_int(int col, int row);
+int		check_int(int col, int row);
 
 void	rush(int col, int row)
 {
 	int i;
 	int j;
 
-	checking_int(col, row);
+	if (check_int(col, row))
+		return ;
 	i = 0;
 	j = 0;
 	while (i < row)
@@ -36,12 +37,20 @@ void	rush(int col, int row)
 	}
 }
 
-void	checking_int(int col, int row)
+int		check_int(int col, int row)
 {
 	if (col <= 0 || row <= 0)
-		ft_putchar('0');
+	{
+		ft_putchar('e');
+		ft_putchar('r');
+		ft_putchar('r');
+		ft_putchar('o');
+		ft_putchar('r');
+		ft_putchar('\n');
+		return (1);
+	}
 	else
-		return ;
+		return (0);
 }
 
 void	all_lines(int i, int j, int col, int row)
@@ -67,4 +76,5 @@ void	all_lines(int i, int j, int col, int row)
 		else
 			ft_putchar(' ');
 	}
+	return ;
 }
